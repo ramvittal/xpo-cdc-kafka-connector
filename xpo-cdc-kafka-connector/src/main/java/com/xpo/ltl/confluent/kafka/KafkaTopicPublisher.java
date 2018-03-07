@@ -21,11 +21,11 @@ public class KafkaTopicPublisher  {
 	
 	
 	
-	private KafkaTopicPublisher() {
+	public KafkaTopicPublisher() {
 		
 	}
 	
-	private static KafkaTopicPublisher getInstance(Properties props,boolean isNew) {
+	public static KafkaTopicPublisher getInstance(Properties props,boolean isNew) {
 		
 		//create a singleton publisher 
 		if(publisher == null || isNew) {
@@ -36,7 +36,7 @@ public class KafkaTopicPublisher  {
 		return publisher;
 	}
 	
-	private static KafkaTopicPublisher getDefaultInstance(String kafkaBootStrapServer, String schemaRegistryUrl) {
+	public static KafkaTopicPublisher getDefaultInstance(String kafkaBootStrapServer, String schemaRegistryUrl) {
 		
 		
 	
